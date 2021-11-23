@@ -1,0 +1,68 @@
+/*
+couleur graphique:
+#BB2020 rouge
+#06111C noir
+#BEC7C7 gris
+#FFEB4D jaune
+#121317 noirbis couleur police
+*/
+html {
+  min-height: 100%;
+}
+
+body {
+  /* faire dépasser aussi le triangle en transparence sur la couleur noir !!
+  et pourquoi pas y mettre un carrousel a la place*/
+  background-color: #BEC7C7;
+  background-image: linear-gradient(0deg, #06111C 30%, transparent 30%),
+    linear-gradient(45deg, #FFEB4D 70%, transparent 30%);
+  font-weight: bolder;
+  text-decoration: underline;
+  text-decoration: none;
+}
+
+img {
+  transform: rotate(0deg);
+  transition: all 2s ease-in-out;
+  height: 100px;
+  width: 200px;
+  float: left;
+}
+
+img:hover {
+  transform: rotate(-180deg);
+  transition: all 2s ease-in-out;
+}
+
+h1 {
+  text-align: left;
+  margin-left: 200px;
+}
+
+h3 {
+  margin-top: auto;
+  font-size: 95%;
+}
+
+.offre p {
+  margin: auto;
+  font-size: smaller;
+  height: auto;
+  width: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #121317;
+  font-size: 200%;
+}
+
+fieldset {
+  width: 50vw;
+  margin-left: 25%;
+}
+
+#reverse input:hover {
+  color: #BEC7C7;
+  background-color: #121317;
+}

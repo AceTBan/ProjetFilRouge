@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ace Annonce</title>
+  <link rel="stylesheet" href="acePageAccueil.css">
+</head>
+
+<body>
+
+  <form class="" action="index.html" method="post">
+
+    <fieldset>
+
+      <legend>Détails du besoin</legend>
+      
+      <label for="radio4">Mme.</label>
+      <input type="radio" name="radio" value="">
+
+      <label for="radio3">M.</label>
+      <input type="radio" name="radio" value="">
+
+      <div>
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" placeholder="Nom" maxlength="20" minlength="2">
+      </div>
+
+      <div>
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" placeholder="Prénom" maxlength="20" minlength="2">
+      </div>
+
+      <div>
+        <label for="mail">E-mail</label>
+        <input type="mail" id="mail" placeholder="Votre_mail@mail.com">
+      </div>
+
+
+      <div>
+        <label for="tel">Téléphone</label>
+        <input type="text" id="tel" placeholder="Ex:0123456789">
+      </div>
+
+      <!-- le mot de passe n'est pas vraiment nécessaire dans le formulaire ...
+      <div>
+        <label for="mdp">Mot de passe</label>
+        <input type="password" id="mdp" placeholder="MotDePasse">
+      </div> -->
+
+      <br>
+
+      <div>
+        <label for="comment">De quel service avez-vous besoin ?</label>
+        <textarea id="comment" placeholder="Détaillez votre demande" cols="70" rows="10"></textarea>
+      </div>
+
+      <div>
+        <label for="date">Date du commentaire</label>
+        <input type="date" name="date" id="date">
+      </div>
+
+      <div>
+        <label for="fichier">Ajouter un fichier</label>
+        <input type="file" accept=".jpg, .png, .gif" name="fichier" id="fichier">
+      </div>
+
+      <br>
+
+      <div id="reverse">
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Annuler">
+      </div>
+
+    </fieldset>
+
+  </form>
+</body>
+
+</html>
