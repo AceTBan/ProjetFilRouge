@@ -12,7 +12,7 @@ html {
 
 body {
   /* faire dépasser aussi le triangle en transparence sur la couleur noir !!
-  et pourquoi pas y mettre un carrousel */
+  et pourquoi pas y mettre un carrousel (avec z-index) */
   background-color: #BEC7C7;
   background-image: linear-gradient(0deg, #06111C 30%, transparent 30%),
     linear-gradient(45deg, #FFEB4D 70%, transparent 30%);
@@ -20,8 +20,8 @@ body {
   font-weight: bolder;
   text-decoration: underline;
   text-decoration: none;
-}
 
+}
 img {
   transform: rotate(0deg);
   transition: all 2s ease-in-out;
