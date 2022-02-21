@@ -67,3 +67,7 @@ fieldset {
   color: #BEC7C7;
   background-color: #121317;
 }
+[class^='imghvr-'],
+[class*=' imghvr-'] {
+  background-color: #efff0d;
+}
