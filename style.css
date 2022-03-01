@@ -13,8 +13,8 @@ html {
 body {
   /* faire dépasser aussi le triangle en transparence sur la couleur noir !!
   et pourquoi pas y mettre un carrousel (avec z-index) */
-  background-color: #BEC7C7;
-  background-image: linear-gradient(0deg, #06111C 30%, transparent 30%),
+  background-color: #bec7c700;
+  background-image: linear-gradient(0deg, #06111c00 30%, transparent 30%),
     linear-gradient(45deg, #FFEB4D 70%, transparent 30%);
   background-position: top left, bottom left;
   font-weight: bolder;
@@ -22,14 +22,16 @@ body {
   text-decoration: none;
 
 }
-img {
+.ace {
   transform: rotate(0deg);
   transition: all 2s ease-in-out;
   height: 100px;
   width: 200px;
   float: left;
 }
-
+img {
+  height: auto;
+}
 img:hover {
   transform: rotate(-180deg);
   transition: all 2s ease-in-out;
@@ -69,5 +71,23 @@ fieldset {
 }
 [class^='imghvr-'],
 [class*=' imghvr-'] {
-  background-color: #efff0d;
+  background-color: #efff0d00;
 }
+.footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
