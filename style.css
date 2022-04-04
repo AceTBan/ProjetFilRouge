@@ -13,9 +13,15 @@ html {
 body {
   /* faire dépasser aussi le triangle en transparence sur la couleur noir !!
   et pourquoi pas y mettre un carrousel (avec z-index) */
+<<<<<<< HEAD:acePageAccueil.css
+  background-color: grey;
+  background-image: linear-gradient(0deg, black 30%, transparent 30%),
+    linear-gradient(45deg, gold 70%, transparent 30%);
+=======
   background-color: #bec7c700;
   background-image: linear-gradient(0deg, #06111c00 30%, transparent 30%),
     linear-gradient(45deg, #FFEB4D 70%, transparent 30%);
+>>>>>>> ed106c2c2c37de60a88d2c65aac5dfad47dc73d5:style.css
   background-position: top left, bottom left;
   font-weight: bolder;
   text-decoration: underline;

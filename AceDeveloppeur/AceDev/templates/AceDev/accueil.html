@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'AceDev/style.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /><!--Wrapper -->
+    <script src="https://kit.fontawesome.com/8e8d5e63b3.js"></script><!--Icone -->
+    <title>Accueil</title>
+</head>
+
+<body>
+   <!--           ----------header----------           -->
+    <div class="header_container">
+        <img class="logo" src="{% static 'AceDev/images/ace.png' %}">
+        <nav>
+            <div class="left">
+                <ul>
+                    <li><a href="{% url 'AceDev:accueil' %}">Accueil</a></li>
+                    <li><a href="{% url 'AceDev:service' %}">évènements</a></li>
+                    <li><a href="{% url 'AceDev:offres' %}">Salles</a></li>
+                    <li><a href="{% url 'AceDev:profil' %}">Informations</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul>
+                    {% if not request.user.is_authenticated %}
+                        <li><a href="{% url 'AceDev:login' %}">Connexion</a></li>
+                        <li><a href="{% url 'AceDev:register' %}">Inscription</a></li>
+                    {% else %}
+                        <li><a href="{% url 'AceDev:profil' %}">Profil</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </div>
+   <!--           ----------header----------           -->
+
+    {% block contenue %}
+        <div class="title_container">
+            <h1>Ace Developpeur</h1>
+            <br>
+            <p> <br> Adrar Project by San Gokool, A©e, Mojo-Jojo and Kheandee.</p>
+            <div class="boutonIndex">
+                <a href="#programmation" class="fancy-btn">Programmation</a><br>
+            </div>
+        </div>
+
+        <div id="stripped">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1062">
+                <polyline points="0,154 131,0 0,348 269,0 0,562 437,0 
+                0,766 565,14 0,1062 719,0 289,1062 843,0 543,1062 995,0 729,1062 1161,0 947,1062 1307,0 1143,1062 1500,162 1299,1062 1500,830"/>
+            </svg>
+        </div>
+
+
+
+
+    {% endblock %}
+
+    <!--            ----------Footer----------            -->
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <img class="logo" src="{% static 'AceDev/images/ace.png' %}">
+            <p class="footer-links">
+                <a href="{% url 'AceDev:accueil' %}" class="link-1">Accueil</a>
+                <a href="{% url 'AceDev:profil' %}">Informations</a>
+                <a href="{% url 'AceDev:service' %}">Connexion</a>
+                <a href="{% url 'AceDev:offres' %}">Contact</a>
+            </p>
+            <p class="footer-company-name"> Adrar Formation TP© 2022</p>
+        </div>
+        <div class="footer-center">
+            <h2 class="title_footer">Coordonnées</h2>
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>11 avenue de l'Europe</span> Ramonville, Toulouse</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>07 71 81 80 20</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:zenith_du_tiers_monde@gmail.com">zenith_du_tiers_monde@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+        <p class="footer-company-about">
+            <h2 class="title_footer">A propos</h2>
+            <p>Designed by Mojo_Jojo© / Powered by San Gokool©</p>
+            <p>Sustained by Kheandee© and A©e</p>
+            <p>Remerciements à Maxime Torlois pour sa participation</p>
+        </p>
+        <div class="footer-icons">
+            <a href="https://fr-fr.facebook.com/lesoubliesdutiersmonde/"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/endatiersmonde"><i class="fa fa-twitter"></i></a>
+            <a href="https://ch.linkedin.com/company/gen-ve-tiers-monde"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/johan-valero/Zenith2.0.git"><i class="fa fa-github"></i></a>
+        </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="{% static 'AceDev/script.js' %}"></script>
+        <!--            ----------Footer----------            -->
+
+</body>
+</html>
