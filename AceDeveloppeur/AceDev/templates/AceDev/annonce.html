@@ -1,38 +1,43 @@
-<!DOCTYPE html>
-<html lang="fr" dir="ltr">
+{% extends 'AceDev/accueilPro.html' %}
+{% load static %}
 
-<head>
-  <meta charset="utf-8">
-  <title>Ace liste d’offre</title>
-  <link rel="stylesheet" href="acePageAccueil.css">
-</head>
-
-<body>
-  <header>
-    <div class="logo">
-      <a href="acePageAccueil.html">
-        <img class="logo" src="{% static 'AceDev/images/ace.png' %}">
-      </a>
-    </div>
-    <br>
-    <h1>Développeur</h1>
-
-    <br>
-    <h3>Site de mise en relation entre particulier & professionnel du dev .</h3>
-    </a>
-    </div>
-  </header>
+{% block contenue %}
 
 
 
 
 
 
+<ul class="prog">
+    {% for event in event_list %}
+    <li>
+      <div class="content-wrapper">
+        <div class="news-card">
+          {% for group in event.group.all %}
+          {% if group.pics_group %}
+          <img class="news-card__image" src="{{ group.pics_group.url }}"><br>
+          {% endif %}
+          {% endfor %}
+          <div class="news-card__text-wrapper">
+            <h3 class="news-card__title">{{ event.name_event }}</h3><br>
+            {% language 'fr' %}
+            <div class="news-card__post-date">Du {{ event.begin_date|date:'d F Y' }} au {{ event.end_date|date:'d F Y' }}</div><br>
+            {% endlanguage %}
+            <div class="news-card__details-wrapper">
+              <p class="news-card__excerpt">{{ event.description_event }}&hellip;</p>
+              <div class="boutonIndex">
+                <a href="{% url 'event:detail' event.id %}" class="fancy-btn">Informations/Réservations</a><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
 
 
 
 
-  <footer></footer>
-</body>
 
-</html>
+{% endblock %}

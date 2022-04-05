@@ -1,112 +1,199 @@
 <!DOCTYPE html>
 {% load static %}
 {% load i18n %}
-<html lang="fr">
+<html lang="fr" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'AceDev/style.css' %}">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /><!--Wrapper -->
-    <script src="https://kit.fontawesome.com/8e8d5e63b3.js"></script><!--Icone -->
-    <title>Accueil</title>
+  <meta charset="utf-8">
+  <title>Ace Developpeur</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'AceDev/style.css' %}">
+
 </head>
 
 <body>
-   <!--           ----------header----------           -->
-    <div class="header_container">
-        <img class="logo" src="{% static 'AceDev/images/ace.png' %}">
-        <nav>
-            <div class="left">
-                <ul>
-                    <li><a href="{% url 'AceDev:accueil' %}">Accueil</a></li>
-                    <li><a href="{% url 'AceDev:service' %}">évènements</a></li>
-                    <li><a href="{% url 'AceDev:offres' %}">Salles</a></li>
-                    <li><a href="{% url 'AceDev:profil' %}">Informations</a></li>
-                </ul>
-            </div>
-            <div class="right">
-                <ul>
-                    {% if not request.user.is_authenticated %}
-                        <li><a href="{% url 'AceDev:login' %}">Connexion</a></li>
-                        <li><a href="{% url 'AceDev:register' %}">Inscription</a></li>
-                    {% else %}
-                        <li><a href="{% url 'AceDev:profil' %}">Profil</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-        </nav>
+  <!-- ----------          <header>          ---------- -->
+  <div class="header_container">
+    <img class="logo" src="{% static 'AceDev/images/ace.png' %}">
+    <nav>
+      <div class="left">
+        <ul>
+          <li><a href="{% url 'AceDev:accueil' %}">Accueil</a></li>
+          <li><a href="{% url 'AceDev:formulaire' %}">Créer une annonce</a></li>
+          <li><a href="{% url 'AceDev:cvtheque' %}">Consulter des profils</a></li>
+          <li><a href="{% url 'AceDev:accueilPro' %}">Site Professionnel -></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- ----------          </header>         ---------- -->
+
+
+
+
+
+
+  {% block contenue %}
+
+<!-- ----------          <box-content>          ---------- -->
+
+    <!-- petit bandeau (voir bootdejojo section AOS) ace developpeur "Site de mise en relation entre particulier & professionnel du dev ." -->
+    
+
+<!-- ----------          </box-content>         ---------- -->
+
+
+
+
+
+
+
+
+  <!-- ----------          <subcategory_card>          ---------- -->
+
+    
+  <div class="content-wrapper">
+
+    <div class="news-card">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="https://images.pexels.com/photos/127513/pexels-photo-127513.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h2 class="news-card__title">Envie d'un site web ?</h2>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">Parlez-nous de votre projet, poster une annonce ^^</p>
+          <a href="{% url 'AceDev:formulaire' %}" class="news-card__read-more">—>c'est ici<— <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
     </div>
-   <!--           ----------header----------           -->
 
-    {% block contenue %}
-        <div class="title_container">
-            <h1>Ace Developpeur</h1>
-            <br>
-            <p> <br> Adrar Project by San Gokool, A©e, Mojo-Jojo and Kheandee.</p>
-            <div class="boutonIndex">
-                <a href="#programmation" class="fancy-btn">Programmation</a><br>
+    <div class="news-card">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="https://images.pexels.com/photos/631954/pexels-photo-631954.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h2 class="news-card__title">Consulter les profils des nos développeur.</h2>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">Faite du lèche vitrine en regardent les réalisation de nos chers dev ;)</p>
+          <a href="{% url 'AceDev:cvtheque' %}" class="news-card__read-more">—>c'est ici<— <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h2 class="news-card__title">Amazing Title</h2>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae&hellip;</p>
+          <a href="{% url 'AceDev:accueilPro' %}" class="news-card__read-more">—>c'est ici<— <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- ----------          </subcategory_cards>        ---------- -->
+
+
+  {% endblock %}
+
+
+  <ul class="prog">
+    {% for event in event_list %}
+    <li>
+      <div class="content-wrapper">
+        <div class="news-card">
+          {% for group in event.group.all %}
+          {% if group.pics_group %}
+          <img class="news-card__image" src="{{ group.pics_group.url }}"><br>
+          {% endif %}
+          {% endfor %}
+          <div class="news-card__text-wrapper">
+            <h3 class="news-card__title">{{ event.name_event }}</h3><br>
+            {% language 'fr' %}
+            <div class="news-card__post-date">Du {{ event.begin_date|date:'d F Y' }} au {{ event.end_date|date:'d F Y' }}</div><br>
+            {% endlanguage %}
+            <div class="news-card__details-wrapper">
+              <p class="news-card__excerpt">{{ event.description_event }}&hellip;</p>
+              <div class="boutonIndex">
+                <a href="{% url 'event:detail' event.id %}" class="fancy-btn">Informations/Réservations</a><br>
+              </div>
             </div>
+          </div>
         </div>
-
-        <div id="stripped">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1062">
-                <polyline points="0,154 131,0 0,348 269,0 0,562 437,0 
-                0,766 565,14 0,1062 719,0 289,1062 843,0 543,1062 995,0 729,1062 1161,0 947,1062 1307,0 1143,1062 1500,162 1299,1062 1500,830"/>
-            </svg>
-        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
 
 
 
 
-    {% endblock %}
 
-    <!--            ----------Footer----------            -->
-    <footer class="footer-distributed">
-        <div class="footer-left">
-            <img class="logo" src="{% static 'AceDev/images/ace.png' %}">
-            <p class="footer-links">
-                <a href="{% url 'AceDev:accueil' %}" class="link-1">Accueil</a>
-                <a href="{% url 'AceDev:profil' %}">Informations</a>
-                <a href="{% url 'AceDev:service' %}">Connexion</a>
-                <a href="{% url 'AceDev:offres' %}">Contact</a>
-            </p>
-            <p class="footer-company-name"> Adrar Formation TP© 2022</p>
-        </div>
-        <div class="footer-center">
-            <h2 class="title_footer">Coordonnées</h2>
-            <div>
-                <i class="fa fa-map-marker"></i>
-                <p><span>11 avenue de l'Europe</span> Ramonville, Toulouse</p>
-            </div>
-            <div>
-                <i class="fa fa-phone"></i>
-                <p>07 71 81 80 20</p>
-            </div>
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p><a href="mailto:zenith_du_tiers_monde@gmail.com">zenith_du_tiers_monde@gmail.com</a></p>
-            </div>
-        </div>
-        <div class="footer-right">
-        <p class="footer-company-about">
-            <h2 class="title_footer">A propos</h2>
-            <p>Designed by Mojo_Jojo© / Powered by San Gokool©</p>
-            <p>Sustained by Kheandee© and A©e</p>
-            <p>Remerciements à Maxime Torlois pour sa participation</p>
-        </p>
-        <div class="footer-icons">
-            <a href="https://fr-fr.facebook.com/lesoubliesdutiersmonde/"><i class="fa fa-facebook"></i></a>
-            <a href="https://twitter.com/endatiersmonde"><i class="fa fa-twitter"></i></a>
-            <a href="https://ch.linkedin.com/company/gen-ve-tiers-monde"><i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/johan-valero/Zenith2.0.git"><i class="fa fa-github"></i></a>
-        </div>
-        </div>
-    </footer>
 
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="{% static 'AceDev/script.js' %}"></script>
-        <!--            ----------Footer----------            -->
 
+
+
+
+  <!-- ----------          <footer>          ---------- -->
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <img class="logo" src="{% static 'AceDev/images/ace.png' %}">
+      <p class="footer-links">
+        <a href="{% url 'AceDev:accueil' %}" class="link-1">Accueil</a>
+        <a href="{% url 'AceDev:formulaire' %}">Créer une Annonce</a>
+        <a href="{% url 'AceDev:cvtheque' %}">Consulter des profils</a>
+      </p>
+      <p class="footer-company-name"> Ace Developpeur © 2021</p>
+    </div>
+    <div class="footer-center">
+      <h2 class="title_footer">Coordonnées</h2>
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>11 avenue de l'Europe</span> Ramonville, Toulouse</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>01 23 45 67 89</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:acedevelopper@gmail.com">acedevelopper@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+      <h2 class="title_footer">A propos</h2>
+      <img class="logo" src="{% static 'AceDev/images/blason_devops.png' %}">
+      <p>Designed with all the love in the world with the help Mojo_Jojo©</p>
+      </p>
+      <div class="footer-icons">
+        <a href="#"></i></a>
+        <a href="https://fr.linkedin.com/in/david-esteban-123b93103?trk=people-guest_people_search-card"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/AceTBan/ProjetFilRouge"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- ----------          </footer>         ---------- -->
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+    <!--
+        (wouaf)
+    \\
+    (o>
+ \\_//)
+  \_/_)
+   _|_
+
+-->

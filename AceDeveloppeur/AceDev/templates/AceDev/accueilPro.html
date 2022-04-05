@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ace Developpeur</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'AceDev/style.css' %}">
+
+</head>
+
+<body>
+  <!-- ----------          <header>          ---------- -->
+  <div class="header_container">
+    <img class="logo" src="{% static 'AceDev/images/ace.png' %}">
+    <nav>
+      <div class="left">
+        <ul>
+          <li><a href="{% url 'AceDev:accueilPro' %}">Accueil</a></li>
+          <li><a href="{% url 'AceDev:annonce' %}">Choisir une offre</a></li>
+          <li><a href="{% url 'AceDev:service' %}">Proposer un service</a></li>
+          <li><a href="{% url 'AceDev:accueil' %}"><- Site Grand Public</a></li>
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!-- ----------          </header>         ---------- -->
+
+
+
+
+
+
+  {% block contenue %}
+<!-- ----------          <box-content>          ---------- -->
+
+    <!-- petit bandeau ace developpeur "Site de mise en relation entre particulier & professionnel du dev ." -->
+    
+
+<!-- ----------          </box-content>         ---------- -->
+
+  <!-- ----------          <subcategory_card>          ---------- -->
+
+    
+  <div class="content-wrapper">
+
+    <div class="news-card">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="https://images.pexels.com/photos/248486/pexels-photo-248486.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h2 class="news-card__title">Choisissez l'annonce qui vous parle le plus</h2>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">& commencer a développer </p>
+          <a href="{% url 'AceDev:annonce' %}" class="news-card__read-more">—>c'est ici<— <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="https://images.pexels.com/photos/206660/pexels-photo-206660.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h2 class="news-card__title">Proposer vos services afin d'être sollicité</h2>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">  Proposez vos compétences et recevez des projets intéressants de clients.</p>
+          <a href="{% url 'AceDev:service' %}" class="news-card__read-more">—>c'est ici<— <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <a href="#" class="news-card__card-link"></a>
+      <img src="https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image">
+      <div class="news-card__text-wrapper">
+        <h2 class="news-card__title">Créer et modifier votre profil .</h2>
+        <div class="news-card__details-wrapper">
+          <p class="news-card__excerpt">Dévoiler l’étendue de votre savoir-faire</p>
+          <a href="{% url 'AceDev:profil' %}" class="news-card__read-more">—>c'est ici<— <i class="fas fa-long-arrow-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <!-- ----------          </subcategory_cards>        ---------- -->
+
+
+  {% endblock %}
+
+
+
+
+
+
+
+
+
+
+  <!-- ----------          <footer>          ---------- -->
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <img class="logo" src="{% static 'AceDev/images/ace.png' %}">
+      <p class="footer-links">
+        <a href="{% url 'AceDev:accueilPro' %}" class="link-1">Accueil</a>
+        <a href="{% url 'AceDev:annonce' %}">Choisir une offre</a>
+        <a href="{% url 'AceDev:service' %}">Proposer un service</a>
+      </p>
+      <p class="footer-company-name"> Ace Developpeur © 2021</p>
+    </div>
+    <div class="footer-center">
+      <h2 class="title_footer">Coordonnées</h2>
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>11 avenue de l'Europe</span> Ramonville, Toulouse</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>01 23 45 67 89</p>
+      </div>
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:acedevelopper@gmail.com">acedevelopper@gmail.com</a></p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <p class="footer-company-about">
+      <h2 class="title_footer">A propos</h2>
+      <img class="logo" src="{% static 'AceDev/images/blason_devops.png' %}">
+      <p>Designed with all the love in the world with the help Mojo_Jojo©</p>
+      </p>
+      <div class="footer-icons">
+        <a href="#"></i></a>
+        <a href="https://fr.linkedin.com/in/david-esteban-123b93103?trk=people-guest_people_search-card"><i class="fa fa-linkedin"></i></a>
+        <a href="https://github.com/AceTBan/ProjetFilRouge"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+  <!-- ----------          </footer>         ---------- -->
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+    <!--
+        (wouaf)
+    \\
+    (o>
+ \\_//)
+  \_/_)
+   _|_
+
+-->
