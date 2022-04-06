@@ -1,11 +1,17 @@
 /*
+
 couleur graphique:
+
 #BB2020 rouge
 #06111C noir
+
 #BEC7C7 gris
+
 #FFEB4D jaune
-#121317 noirbis couleur police
+#121317 noir
+
 */
+
 @import url('http://fonts.cdnfonts.com/css/noe-display');
 @import url('http://fonts.cdnfonts.com/css/rocked');
 
@@ -17,13 +23,13 @@ couleur graphique:
 }
 
 body {
-    background-image:url(./images/1.png);
+    background-image:url(./images/1bis.png);
     background-position: center;
     background-size: cover;
     /* background-repeat: no-repeat; */
     width: 100vw;
     height: 100vh;
-}
+}y
 
 /* ----------------------------NAVBAR--------------------------------- */
 .left{
@@ -64,14 +70,14 @@ nav li{
 }
 
 nav li a {
-    color: #BB2020;
+    color: #BEC7C7;
     text-decoration: none;
 }
 
 nav li a:hover{
     cursor: pointer;
     transition: all ease-in-out 0.6s;
-    border: rgb(220, 239, 13) solid 0.8px;
+    border: rgba(4, 5, 1, 0) solid 0.8px;
     padding: 10px;
 }
 
@@ -95,10 +101,10 @@ nav li a:hover{
 }
 
 .title_container p{
-    color: #fff;
+    color: #121317;
     text-align: center;
     font-size: 18px;
-    margin-top: -55px;
+    margin-top: 10px;
 }
 
 /* Animation affichage du titre */
@@ -192,7 +198,7 @@ div#stripped {
     /* max-height: 1000px; */
     margin: 0 auto;
     background: #000;
-    background-image: url('images/#');
+    background-image: url('images/1bis.png');
     background-size: cover;
     background-position: center;
     font-size: 0;
@@ -207,7 +213,7 @@ div#stripped svg {
 div#stripped svg polyline {
     height: 100vh;
     fill: none;
-    stroke: #BB2020;
+    stroke: #FFEB4D;
     stroke-width: 160;
     stroke-dasharray: 20000;
     stroke-dashoffset: 20000;
@@ -239,7 +245,7 @@ div#stripped svg polyline {
 }
 
 .swiper .swiper-button-prev:hover{
-    color: #BB2020;
+    color: #FFEB4D;
 }
 
 .swiper .swiper-button-next{
@@ -248,7 +254,7 @@ div#stripped svg polyline {
 }
 
 .swiper .swiper-button-next:hover{
-    color: #BB2020;
+    color: #FFEB4D;
 }
 
 .img_slider{
@@ -275,7 +281,7 @@ div#stripped svg polyline {
     text-align: center;
     font-size: 20px;
     text-transform: uppercase;
-    background: linear-gradient(90deg, #fff, #BB2020, #fff);
+    background: linear-gradient(90deg, #fff, #FFEB4D, #fff);
     letter-spacing: 2px;
     -webkit-background-clip: text;
     background-clip: text;
@@ -317,7 +323,7 @@ div#stripped svg polyline {
  /* Blockquote header */
 .blockquote h1 {
     position: relative; /* for pseudos */
-    color: #BB2020;
+    color: #FFEB4D;
     font-size: 2rem;
     font-weight: normal;
     line-height: 1;
@@ -332,7 +338,7 @@ div#stripped svg polyline {
 .blockquote h1:after {
     content:"";
     position: absolute;
-    border: 2px solid #BB2020;
+    border: 2px solid #FFEB4D;
     border-radius: 0 50px 0 0;
     width: 60px;
     height: 60px;
@@ -470,7 +476,7 @@ div#stripped svg polyline {
 }
 
 .news-card:hover .news-card__title {
-    color: #BB2020;
+    color: #FFEB4D;
 }
 
 .news-card:hover .news-card__image {
@@ -485,7 +491,7 @@ div#stripped svg polyline {
 /* ------------------FOOTER------------------------- */
 
 .footer-distributed{
-    background-image: url('./images/2.png ');
+    background-image: url('./images/9.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -503,7 +509,7 @@ div#stripped svg polyline {
 .footer-distributed .footer-right{
 	display: inline-block;
 	vertical-align: top;
-    color: #fff;
+    color: #BEC7C7;
     height: 200px;
     background-color: rgba(0, 0, 0, 0.384);
 }
@@ -596,7 +602,7 @@ div#stripped svg polyline {
     font-size: 20px;
     margin-top: 80px;
     left: 0;
-    color: #BB2020;
+    color: #FFEB4D;
     display: inline-block;
     padding-right: 5px;
 }
@@ -700,7 +706,7 @@ div#stripped svg polyline {
 }
 
 .a_detail:hover{
-    color: #BB2020;
+    color: #FFEB4D;
 }
 
 .date_detail{
@@ -765,7 +771,7 @@ div#stripped2 svg {
 div#stripped2 svg polyline {
     height: 100vh;
     fill: none;
-    stroke: #BB2020;
+    stroke: #FFEB4D;
     stroke-width: 180;
     stroke-dasharray: 20000;
     stroke-dashoffset: 20000;
@@ -837,7 +843,7 @@ div#stripped2 svg polyline {
     border-radius: 8px;
     overflow: hidden;
     padding-bottom: 65%;
-    background-image: url("./images/2.png");
+    background-image: url("./images/#");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -853,7 +859,7 @@ div#stripped2 svg polyline {
     right: 10%;
     font-size: 60px;
     font-weight: 700;
-    color: #BB2020;
+    color: #FFEB4D;
     line-height: 1.222;
 }
 
@@ -899,11 +905,11 @@ div#stripped2 svg polyline {
 
 .input-field:focus, .input-field:valid {
     outline: 0;
-    border-bottom-color: #BB2020;
+    border-bottom-color: #FFEB4D;
 }
 
 .input-field:focus + .input-label, .input-field:valid + .input-label {
-    color: #BB2020;
+    color: #FFEB4D;
     transform: translateY(-1.5rem);
 }
 
@@ -912,7 +918,7 @@ div#stripped2 svg polyline {
 }
 
 .a_login{
-    color: #BB2020;
+    color: #FFEB4D;
 }
 
 .a_login:hover{
@@ -930,8 +936,8 @@ div#stripped2 svg polyline {
 }
 
 .bouton_login:hover{
-    color: #BB2020;
-    border: 1px solid #BB2020;
+    color: #FFEB4D;
+    border: 1px solid #FFEB4D;
     transform: rotate(5deg);
 }
 
@@ -982,7 +988,7 @@ div#stripped2 svg polyline {
     border-width: 4px;
     border-style: solid;
     border-radius: 50%;
-    border-color: rgb(230, 16, 16);
+    border-color: #FFEB4D;
     width: 20px;
     height: 20px;
     box-sizing: border-box;
@@ -1074,4 +1080,96 @@ div#stripped2 svg polyline {
     -webkit-transform: none;
     transform: none;
 }
+}
+
+.contact-us {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    font-size: 12pt;
+    font-family: "Spartan";
+    color: #2A293E;
+  background: #f8f4e5;
+  padding: 50px 100px;
+  border-top: 10px solid #f45702;
+}
+
+label, input, textarea {
+  display: block;
+  width: 100%;
+  font-size: 12pt;
+  line-height: 24pt;
+  font-family: "Spartan";
+}
+
+input {
+  margin-bottom: 24pt;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 10pt;
+  line-height: 24pt;
+  font-style: italic;
+  margin: 0 0 0.5em 0;
+}
+
+span {
+  font-size: 8pt;
+}
+
+em {
+  color: #f45702;
+  font-weight: bold;
+}
+
+input, textarea {
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  background: #f8f4e5;
+  padding-left: 5px;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid #6bd4b1;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  display: block;
+  float: right;
+  line-height: 24pt;
+  padding: 0 20px;
+  border: none;
+  background: #f45702;
+  color: white;
+  letter-spacing: 2px;
+  transition: 0.2s all ease-in-out;
+  border-bottom: 2px solid transparent;
+  outline: none;
+}
+button:hover {
+  background: inherit;
+  color: #f45702;
+  border-bottom: 2px solid #f45702;
+}
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  border: 1px solid #6bd4b1;
+  -webkit-text-fill-color: #2A293E;
+  transition: background-color 5000s ease-in-out 0s;
 }

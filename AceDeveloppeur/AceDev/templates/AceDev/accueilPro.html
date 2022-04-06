@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <title>Ace Developpeur</title>
-  <link rel="stylesheet" type="text/css" href="{% static 'AceDev/style.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'AceDev/stylePro.css' %}">
 
 </head>
 
@@ -15,12 +15,12 @@
   <div class="header_container">
     <img class="logo" src="{% static 'AceDev/images/ace.png' %}">
     <nav>
-      <div class="left">
+      <div class="right">
         <ul>
           <li><a href="{% url 'AceDev:accueilPro' %}">Accueil</a></li>
           <li><a href="{% url 'AceDev:annonce' %}">Choisir une offre</a></li>
           <li><a href="{% url 'AceDev:service' %}">Proposer un service</a></li>
-          <li><a href="{% url 'AceDev:accueil' %}"><- Site Grand Public</a></li>
+          <li><a href="{% url 'AceDev:accueil' %}"><- Grand Public</a></li>
 
         </ul>
       </div>
@@ -38,7 +38,18 @@
 
     <!-- petit bandeau ace developpeur "Site de mise en relation entre particulier & professionnel du dev ." -->
     
+    <div class="title_container">
+      <h1>AceDeveloppeur</h1>
+      <p>Site de mise en relation entre particulier & professionnel du dev .</p>
+ 
+  </div>
 
+  <div id="stripped">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1062">
+          <polyline points="0,154 131,0 0,348 269,0 0,562 437,0 
+          0,766 565,14 0,1062 719,0 289,1062 843,0 543,1062 995,0 729,1062 1161,0 947,1062 1307,0 1143,1062 1500,162 1299,1062 1500,830"/>
+      </svg>
+  </div>
 <!-- ----------          </box-content>         ---------- -->
 
   <!-- ----------          <subcategory_card>          ---------- -->
@@ -48,7 +59,7 @@
 
     <div class="news-card">
       <a href="#" class="news-card__card-link"></a>
-      <img src="https://images.pexels.com/photos/248486/pexels-photo-248486.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image">
+      <img src="{% static 'AceDev/images/7.jpg' %}" alt="" class="news-card__image">
       <div class="news-card__text-wrapper">
         <h2 class="news-card__title">Choisissez l'annonce qui vous parle le plus</h2>
         <div class="news-card__details-wrapper">
@@ -60,7 +71,7 @@
 
     <div class="news-card">
       <a href="#" class="news-card__card-link"></a>
-      <img src="https://images.pexels.com/photos/206660/pexels-photo-206660.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image">
+      <img src="{% static 'AceDev/images/8.png' %}" alt="" class="news-card__image">
       <div class="news-card__text-wrapper">
         <h2 class="news-card__title">Proposer vos services afin d'être sollicité</h2>
         <div class="news-card__details-wrapper">
@@ -72,11 +83,11 @@
 
     <div class="news-card">
       <a href="#" class="news-card__card-link"></a>
-      <img src="https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image">
+      <img src="{% static 'AceDev/images/0.png' %}" alt="" class="news-card__image">
       <div class="news-card__text-wrapper">
-        <h2 class="news-card__title">Créer et modifier votre profil .</h2>
+        <h2 class="news-card__title">Modifier votre profil .</h2>
         <div class="news-card__details-wrapper">
-          <p class="news-card__excerpt">Dévoiler l’étendue de votre savoir-faire</p>
+          <p class="news-card__excerpt">Afin de dévoiler toute l’étendue de votre savoir-faire</p>
           <a href="{% url 'AceDev:profil' %}" class="news-card__read-more">—>c'est ici<— <i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
       </div>
@@ -124,19 +135,18 @@
       <div>
         <i class="fa fa-envelope"></i>
         <p><a href="mailto:acedevelopper@gmail.com">acedevelopper@gmail.com</a></p>
+        <!-- <div class="footer-icons">
+          <a href="#"></i></a>
+          <a href="https://fr.linkedin.com/in/david-esteban-123b93103?trk=people-guest_people_search-card"><i class="fa fa-linkedin"></i></a>
+          <a href="https://github.com/AceTBan/ProjetFilRouge"><i class="fa fa-github"></i></a>
+        </div> -->
       </div>
     </div>
     <div class="footer-right">
       <p class="footer-company-about">
       <h2 class="title_footer">A propos</h2>
       <img class="logo" src="{% static 'AceDev/images/blason_devops.png' %}">
-      <p>Designed with all the love in the world with the help Mojo_Jojo©</p>
       </p>
-      <div class="footer-icons">
-        <a href="#"></i></a>
-        <a href="https://fr.linkedin.com/in/david-esteban-123b93103?trk=people-guest_people_search-card"><i class="fa fa-linkedin"></i></a>
-        <a href="https://github.com/AceTBan/ProjetFilRouge"><i class="fa fa-github"></i></a>
-      </div>
     </div>
   </footer>
   <!-- ----------          </footer>         ---------- -->

@@ -15,12 +15,12 @@
   <div class="header_container">
     <img class="logo" src="{% static 'AceDev/images/ace.png' %}">
     <nav>
-      <div class="left">
+      <div class="right">
         <ul>
           <li><a href="{% url 'AceDev:accueil' %}">Accueil</a></li>
           <li><a href="{% url 'AceDev:formulaire' %}">Créer une annonce</a></li>
           <li><a href="{% url 'AceDev:cvtheque' %}">Consulter des profils</a></li>
-          <li><a href="{% url 'AceDev:accueilPro' %}">Site Professionnel -></a></li>
+          <li><a href="{% url 'AceDev:accueilPro' %}">Professionnel -></a></li>
         </ul>
       </div>
     </nav>
@@ -37,7 +37,19 @@
 <!-- ----------          <box-content>          ---------- -->
 
     <!-- petit bandeau (voir bootdejojo section AOS) ace developpeur "Site de mise en relation entre particulier & professionnel du dev ." -->
-    
+    <div class="title_container">
+      <h1>AceDeveloppeur</h1>
+      <p>Site de mise en relation entre particulier & professionnel du dev .</p>
+ 
+  </div>
+
+  <div id="stripped">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1062">
+          <polyline points="0,154 131,0 0,348 269,0 0,562 437,0 
+          0,766 565,14 0,1062 719,0 289,1062 843,0 543,1062 995,0 729,1062 1161,0 947,1062 1307,0 1143,1062 1500,162 1299,1062 1500,830"/>
+      </svg>
+  </div>
+
 
 <!-- ----------          </box-content>         ---------- -->
 
@@ -55,7 +67,7 @@
 
     <div class="news-card">
       <a href="#" class="news-card__card-link"></a>
-      <img src="https://images.pexels.com/photos/127513/pexels-photo-127513.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image">
+      <img src="{% static 'AceDev/images/4.jpg' %}" alt="" class="news-card__image">
       <div class="news-card__text-wrapper">
         <h2 class="news-card__title">Envie d'un site web ?</h2>
         <div class="news-card__details-wrapper">
@@ -67,7 +79,7 @@
 
     <div class="news-card">
       <a href="#" class="news-card__card-link"></a>
-      <img src="https://images.pexels.com/photos/631954/pexels-photo-631954.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="" class="news-card__image">
+      <img src="{% static 'AceDev/images/5.png' %}" alt="" class="news-card__image">
       <div class="news-card__text-wrapper">
         <h2 class="news-card__title">Consulter les profils des nos développeur.</h2>
         <div class="news-card__details-wrapper">
@@ -79,11 +91,11 @@
 
     <div class="news-card">
       <a href="#" class="news-card__card-link"></a>
-      <img src="https://images.pexels.com/photos/247599/pexels-photo-247599.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" class="news-card__image">
+      <img src="{% static 'AceDev/images/6.jpg' %}" alt="" class="news-card__image">
       <div class="news-card__text-wrapper">
-        <h2 class="news-card__title">Amazing Title</h2>
+        <h2 class="news-card__title">Créer votre compte & devenez prestataire.</h2>
         <div class="news-card__details-wrapper">
-          <p class="news-card__excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis beatae&hellip;</p>
+          <p class="news-card__excerpt">Professionnelle ou freelance vos compétences peuvent rendre bien des services .</p>
           <a href="{% url 'AceDev:accueilPro' %}" class="news-card__read-more">—>c'est ici<— <i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
       </div>
@@ -99,35 +111,7 @@
   {% endblock %}
 
 
-  <ul class="prog">
-    {% for event in event_list %}
-    <li>
-      <div class="content-wrapper">
-        <div class="news-card">
-          {% for group in event.group.all %}
-          {% if group.pics_group %}
-          <img class="news-card__image" src="{{ group.pics_group.url }}"><br>
-          {% endif %}
-          {% endfor %}
-          <div class="news-card__text-wrapper">
-            <h3 class="news-card__title">{{ event.name_event }}</h3><br>
-            {% language 'fr' %}
-            <div class="news-card__post-date">Du {{ event.begin_date|date:'d F Y' }} au {{ event.end_date|date:'d F Y' }}</div><br>
-            {% endlanguage %}
-            <div class="news-card__details-wrapper">
-              <p class="news-card__excerpt">{{ event.description_event }}&hellip;</p>
-              <div class="boutonIndex">
-                <a href="{% url 'event:detail' event.id %}" class="fancy-btn">Informations/Réservations</a><br>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
-
-
+  
 
 
 
@@ -166,13 +150,12 @@
       <p class="footer-company-about">
       <h2 class="title_footer">A propos</h2>
       <img class="logo" src="{% static 'AceDev/images/blason_devops.png' %}">
-      <p>Designed with all the love in the world with the help Mojo_Jojo©</p>
       </p>
-      <div class="footer-icons">
+      <!-- <div class="footer-icons">
         <a href="#"></i></a>
         <a href="https://fr.linkedin.com/in/david-esteban-123b93103?trk=people-guest_people_search-card"><i class="fa fa-linkedin"></i></a>
         <a href="https://github.com/AceTBan/ProjetFilRouge"><i class="fa fa-github"></i></a>
-      </div>
+      </div> -->
     </div>
   </footer>
   <!-- ----------          </footer>         ---------- -->
