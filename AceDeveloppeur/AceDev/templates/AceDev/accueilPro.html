@@ -13,14 +13,14 @@
 <body>
   <!-- ----------          <header>          ---------- -->
   <div class="header_container">
-    <img class="logo" src="{% static 'AceDev/images/ace.png' %}">
-    <nav>
+    <a href="{% url 'AceDev:accueilPro' %}">
+      <img class="logo" src="{% static 'AceDev/images/ace.png' %}">      
+    </a>    <nav>
       <div class="right">
         <ul>
-          <li><a href="{% url 'AceDev:accueilPro' %}">Accueil</a></li>
           <li><a href="{% url 'AceDev:annonce' %}">Choisir une offre</a></li>
           <li><a href="{% url 'AceDev:service' %}">Proposer un service</a></li>
-          <li><a href="{% url 'AceDev:accueil' %}"><- Grand Public</a></li>
+          <li><a href="{% url 'AceDev:accueil' %}"><-- Grand Public</a></li>
 
         </ul>
       </div>
@@ -58,37 +58,34 @@
   <div class="content-wrapper">
 
     <div class="news-card">
-      <a href="#" class="news-card__card-link"></a>
+      <a href="{% url 'AceDev:annonce' %}" class="news-card__card-link"></a>
       <img src="{% static 'AceDev/images/7.jpg' %}" alt="" class="news-card__image">
       <div class="news-card__text-wrapper">
         <h2 class="news-card__title">Choisissez l'annonce qui vous parle le plus</h2>
         <div class="news-card__details-wrapper">
           <p class="news-card__excerpt">& commencer a développer </p>
-          <a href="{% url 'AceDev:annonce' %}" class="news-card__read-more">—>c'est ici<— <i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
       </div>
     </div>
 
     <div class="news-card">
-      <a href="#" class="news-card__card-link"></a>
+      <a href="{% url 'AceDev:service' %}" class="news-card__card-link"></a>
       <img src="{% static 'AceDev/images/8.png' %}" alt="" class="news-card__image">
       <div class="news-card__text-wrapper">
         <h2 class="news-card__title">Proposer vos services afin d'être sollicité</h2>
         <div class="news-card__details-wrapper">
           <p class="news-card__excerpt">  Proposez vos compétences et recevez des projets intéressants de clients.</p>
-          <a href="{% url 'AceDev:service' %}" class="news-card__read-more">—>c'est ici<— <i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
       </div>
     </div>
 
     <div class="news-card">
-      <a href="#" class="news-card__card-link"></a>
+      <a href="{% url 'AceDev:profil' %}" class="news-card__card-link"></a>
       <img src="{% static 'AceDev/images/0.png' %}" alt="" class="news-card__image">
       <div class="news-card__text-wrapper">
         <h2 class="news-card__title">Modifier votre profil .</h2>
         <div class="news-card__details-wrapper">
           <p class="news-card__excerpt">Afin de dévoiler toute l’étendue de votre savoir-faire</p>
-          <a href="{% url 'AceDev:profil' %}" class="news-card__read-more">—>c'est ici<— <i class="fas fa-long-arrow-alt-right"></i></a>
         </div>
       </div>
     </div>
@@ -134,7 +131,7 @@
       </div>
       <div>
         <i class="fa fa-envelope"></i>
-        <p><a href="mailto:acedevelopper@gmail.com">acedevelopper@gmail.com</a></p>
+        <p><a href="mailto:acedevelopper@gmail.com">AceDevelopper@gmail.com</a></p>
         <!-- <div class="footer-icons">
           <a href="#"></i></a>
           <a href="https://fr.linkedin.com/in/david-esteban-123b93103?trk=people-guest_people_search-card"><i class="fa fa-linkedin"></i></a>

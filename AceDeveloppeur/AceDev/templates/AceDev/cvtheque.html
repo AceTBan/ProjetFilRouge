@@ -3,12 +3,30 @@
 
 {% block contenue %}
 
-
-
-
-
-
-
+<ul class="prog">
+    {% for AceDev in dernier_service %}
+    <li>
+      <div class="content-wrapper">
+        <div class="news-card">
+          {% for group in AceDev.group.all %}
+          {% if group.pics_group %}
+          <img class="news-card__image" src="{{ group.pics_group.url }}"><br>
+          {% endif %}
+          {% endfor %}
+          <div class="news-card__text-wrapper">
+            <h3 class="news-card__title">{{ AceDev.name_event }}</h3><br>
+            <div class="news-card__details-wrapper">
+              <p class="news-card__excerpt">{{ AceDev.description_event }}&hellip;</p>
+              <div class="boutonIndex">
+                <a href="{% url 'AceDev:detail' AceDev.id %}" class="fancy-btn">Informations/Réservations</a><br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
 
 
 {% endblock %}

@@ -17,7 +17,8 @@ couleur graphique:
 }
 
 body {
-    background-image:url(./images/22.png);
+    /* background-image:url(./images/00.png); */
+    background-color: #06111C;
     background-position: center;
     background-size: cover;
     /* background-repeat: no-repeat; */
@@ -393,8 +394,8 @@ div#stripped svg polyline {
     border: 0px solid aqua;
     margin: 0.5rem;
     position: relative;
-    width: 590px;
-    height: 280px;
+    width: 720px;
+    height: 480px;
     overflow: hidden;
     border-radius: 0.5rem;
     flex: 1;
@@ -586,7 +587,7 @@ div#stripped svg polyline {
 }
 
 .footer-distributed .footer-center p a{
-	color:  rgb(0, 0, 255);
+	color:  #BEC7C7;
 	text-decoration: none;;
 }
 
@@ -1085,9 +1086,9 @@ div#stripped2 svg polyline {
     font-size: 12pt;
     font-family: "Spartan";
     color: #2A293E;
-  background: #f8f4e5;
+  background: #BEC7C7;
   padding: 50px 100px;
-  border-top: 10px solid #f45702;
+  border-top: 10px solid #BB2020;
 }
 
 label, input, textarea {
@@ -1115,7 +1116,7 @@ span {
 }
 
 em {
-  color: #f45702;
+  color: #BB2020;
   font-weight: bold;
 }
 
@@ -1123,13 +1124,13 @@ input, textarea {
   border: none;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  background: #f8f4e5;
+  background: #BEC7C7;
   padding-left: 5px;
   outline: none;
 }
 
 input:focus, textarea:focus {
-  border: 1px solid #6bd4b1;
+  border: 1px solid red;
 }
 
 textarea {
@@ -1142,8 +1143,8 @@ button {
   line-height: 24pt;
   padding: 0 20px;
   border: none;
-  background: #f45702;
-  color: white;
+  background: #BB2020;
+  color: 06111C;
   letter-spacing: 2px;
   transition: 0.2s all ease-in-out;
   border-bottom: 2px solid transparent;
@@ -1151,8 +1152,8 @@ button {
 }
 button:hover {
   background: inherit;
-  color: #f45702;
-  border-bottom: 2px solid #f45702;
+  color: #BB2020;
+  border-bottom: 2px solid #BB2020;
 }
 
 
