@@ -6,7 +6,8 @@
 <head>
   <meta charset="utf-8">
   <title>Ace Developpeur</title>
-  <link rel="stylesheet" type="text/css" href="{% static 'AceDev/style.css' %}">
+  <!-- <link rel="stylesheet" type="text/css" href="{% static 'AceDev/style.css' %}"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" /><!--Wrapper -->
 
 </head>
 
@@ -14,7 +15,7 @@
   <!-- ----------          <header>          ---------- -->
   <div class="header_container">
     <a href="{% url 'AceDev:accueil' %}">
-      <img class="logo" src="{% static 'AceDev/images/ace.png' %}">      
+      <!-- <img class="logo" src="{% static 'AceDev/images/ace.png' %}">       -->
     </a>
     <nav>
       <div class="right">
@@ -42,16 +43,47 @@
       <h1>AceDeveloppeur</h1>
       <p>Site de mise en relation entre particulier & professionnel du dev .</p>
  
-  </div>
+    </div>
 
-  <div id="stripped">
+    <div id="stripped">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1062">
           <polyline points="0,180 120,0 0,360 280,0 0,555 444,0 
           0,777 555,10 0,1111 720,0 280,1080 850,0 543,1080 999,0 720,1080 1111,0 951,1080 1200,0 1200,1080 1500,0 1234,1080 1500,800"/>
       </svg>
-  </div>
+    </div>
 
 
+    <!-- CARROUSEL TEMPLATE -->
+    <!-- <div class="swiper">
+      <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                  <div class="slider-box">
+                      <img src="../../static/AceDev/images/1.png">
+                  </div>
+                  <div class="text_slider">
+                      <p class="adress_title">à explorer </p>                            
+                      <h2 class="title_swaper" >Ace</h2>
+                      <h3 class="adress_title">{{ publication.adress}}</h3>
+                      <a class="button_template" href="#">Découvrir </a>
+                  </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="slider-box">
+                    <img src="../../static/AceDev/images/2.png">
+                </div>
+                <div class="text_slider">
+                    <p class="adress_title">à explorer </p>                            
+                    <h2 class="title_swaper" >Ace</h2>
+                    <h3 class="adress_title">{{ publication.adress}}</h3>
+                    <a class="button_template" href="#">Découvrir </a>
+                </div>
+            </div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-scrollbar"></div>
+  </div> -->
 <!-- ----------          </box-content>         ---------- -->
 
 
@@ -104,8 +136,9 @@
 
 
   <!-- ----------          </subcategory_cards>        ---------- -->
-
-
+  {% for annonce in annonce_list %}
+    <h1>{{ annonce.titre_annonce }}</h1>  
+  {% endfor %}
   {% endblock %}
 
 
@@ -157,6 +190,9 @@
     </div>
   </footer>
   <!-- ----------          </footer>         ---------- -->
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="{% static 'AceDev/script.js' %}"></script>
 </body>
 
 </html>

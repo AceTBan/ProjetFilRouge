@@ -20,7 +20,7 @@ class Categorie(models.Model):
 
 class Annonce(models.Model):
     titre_annonce=models.CharField(max_length=50)
-    contenu_annonce=models.TextField
+    contenu_annonce=models.TextField(null=True, blank=True)
     date_crea_annonce= models.DateTimeField("Date de debut d'annonce")
     categorie =models.ManyToManyField(Categorie,blank=True)
     def __str__(self):
