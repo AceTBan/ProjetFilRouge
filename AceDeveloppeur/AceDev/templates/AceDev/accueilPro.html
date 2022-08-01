@@ -29,6 +29,22 @@
   <!-- ----------          </header>         ---------- -->
 
 
+      <!---------------------- PARTIE LOG --------------------------->
+      <div class="right">
+                <ul>
+                    {% if not request.user.is_authenticated %}
+                        <li><a href="{% url 'les_copeaux_de_la_montagne_noire:connexion' %}">Connexion</a></li>
+                        <li><a href="{% url 'les_copeaux_de_la_montagne_noire:inscription' %}">Inscription</a></li>
+                    {% else %}
+                        <li><a href="{% url 'les_copeaux_de_la_montagne_noire:profil' %}">Profil</a></li>
+                        <li><a href="{% url 'les_copeaux_de_la_montagne_noire:deconnexion' %}">Déconnexion</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </div>
+      <!---------------------- partie log --------------------------->
+
 
 
 
