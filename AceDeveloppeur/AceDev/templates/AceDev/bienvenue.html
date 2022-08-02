@@ -1,0 +1,11 @@
+{% extends 'les_copeaux_de_la_montagne_noire/accueil.html' %}
+{% load static %}
+{% block contenue %}
+
+<div class="containerInfo">
+  <h1 class="title4">Bienvenue {{user.lastname}} {{user.firstname}}!</h1>
+  <p class="p_detail">Connexion réussi !</p>
+  <a class="fancy-btn" href="{% url 'les_copeaux_de_la_montagne_noire:accueil' %}">Page d'accueil</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'les_copeaux_de_la_montagne_noire/accueil.html' %}
+{% load static %}
+
+{% block contenue %}
+<div class="containerInfo">
+  <h1 class="title4">Bienvenue</h1>
+  <p class="p_detail">
+    Votre nom d'utilisateur est : {{user.username}}
+  </p>
+  <a class="fancy-btn" href="{% url 'les_copeaux_de_la_montagne_noire:connexion' %}">identifiant</a>
+</div>
+{% endblock %}
